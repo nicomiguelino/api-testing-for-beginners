@@ -4,7 +4,9 @@ channels:
   - defaults
 dependencies:
   - python=3.8
-  - django
+  - django=3.1.1
   - djangorestframework=3.11.1
+  - pip:
+    - drf-spectacular=0.15.1
 prefix: /home/nicomiguelino/anaconda3/envs/api-testing-for-beginners
 
