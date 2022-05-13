@@ -15,8 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView
+from drf_spectacular.utils import extend_schema
+
+
+@extend_schema(exclude=True)
+class SchemaView(SpectacularAPIView):
+    pass
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('songs/', include('songs.urls')),
+    path('schema/', SchemaView.as_view(), name='schema'),
+    path('docs/', SpectacularRedocView.as_view(url_name='schema')),
 ]
