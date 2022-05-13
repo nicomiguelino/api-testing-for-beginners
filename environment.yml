@@ -1,0 +1,10 @@
+name: api-testing-for-beginners
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - django
+  - djangorestframework=3.11.1
+prefix: /home/nicomiguelino/anaconda3/envs/api-testing-for-beginners
+
