@@ -125,3 +125,9 @@ STATIC_URL = '/static/'
 # Django REST Framework
 
 REST_FRAMEWORK = {'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema'}
+
+
+# Heroku
+
+import django_on_heroku
+django_on_heroku.settings(locals())
